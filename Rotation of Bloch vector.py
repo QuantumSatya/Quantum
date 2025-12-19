@@ -1,3 +1,26 @@
+"""
+Rotation of a Bloch Vector about an Arbitrary Axis (n-hat)
+
+This script visualizes the unitary evolution of a single-qubit pure state
+represented on the Bloch sphere. The Bloch vector r₀ undergoes a continuous
+rotation about a user-defined axis n̂ according to Rodrigues' rotation formula.
+
+Features:
+- Interactive Bloch sphere visualization
+- Adjustable rotation axis n̂
+- Adjustable initial state r₀
+- Real-time animation of quantum state evolution
+- Trajectory traced on the Bloch sphere surface
+
+Physical model:
+    r(t) = R_{n̂}(ωt) r₀
+
+Dependencies:
+- numpy
+- matplotlib
+
+Author: Satyajeet
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
