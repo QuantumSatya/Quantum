@@ -239,14 +239,14 @@ ani = FuncAnimation(
 # UI: theta, phi in DEGREES
 # ----------------------------
 
-axbox_theta = plt.axes([0.12, 0.10, 0.33, 0.07])
-axbox_phi   = plt.axes([0.52, 0.10, 0.33, 0.07])
+axbox_theta = plt.axes([0.12, 0.10, 0.09, 0.07])
+axbox_phi   = plt.axes([0.52, 0.10, 0.09, 0.07])
 
 tb_theta = TextBox(axbox_theta, r"$\theta$ (deg)", initial=f"{theta_deg:.3f}")
 tb_phi   = TextBox(axbox_phi,   r"$\phi$ (deg)",   initial=f"{phi_deg:.3f}")
 
-axbtn = plt.axes([0.82, 0.02, 0.14, 0.07])
-btn = Button(axbtn, "Apply")
+axbtn = plt.axes([0.9, 0.11, 0.05, 0.05])
+btn = Button(axbtn, "Go!")
 
 
 def safe_eval_float(expr: str) -> float:
