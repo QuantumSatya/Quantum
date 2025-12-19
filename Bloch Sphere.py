@@ -1,3 +1,44 @@
+"""
+Bloch Sphere Representation of a Single-Qubit Quantum State (θ–φ Parameterization)
+
+This script provides an interactive visualization of a pure single-qubit quantum
+state on the Bloch sphere using spherical coordinates (θ, φ). The quantum state
+is represented as a Bloch vector whose direction is fully determined by the
+polar angle θ and azimuthal angle φ.
+
+Features:
+- Clean Bloch sphere rendering without grids or scale clutter
+- Full Cartesian axes with arrowheads at both positive and negative directions
+- Computational and superposition basis state labels:
+    |0⟩, |1⟩, (|0⟩±|1⟩)/√2, (|0⟩±i|1⟩)/√2
+- Visualization of the Bloch vector corresponding to a general pure state
+- Interactive UI to modify θ and φ (in degrees) in real time
+- Automatic normalization to ensure the state lies on the Bloch sphere surface
+- Faint dotted great-circle connections between all axis tips to provide
+  geometric reference on the sphere
+
+Physical interpretation:
+A general pure qubit state is given by
+
+    |ψ⟩ = cos(θ/2)|0⟩ + e^{iφ} sin(θ/2)|1⟩
+
+which maps to the Bloch vector
+
+    r = (sinθ cosφ, sinθ sinφ, cosθ)
+
+This visualization emphasizes the geometric structure of the qubit state space
+and aids intuition for quantum state representation.
+
+Dependencies:
+- numpy
+- matplotlib
+
+Intended use:
+Educational and conceptual understanding of single-qubit states,
+quantum state geometry, and Bloch sphere visualization.
+
+Author: Satyajeet
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
